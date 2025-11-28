@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 10</title>
+</head>
+<body>
+    <h1 id="greeting"></h1>
+
+    <button id="morning">Goedemorgen</button>
+    <button id="noon">Goedemiddag</button>
+    <button id="evening">Goedenavond</button>
+
+    <script>
+        const greeting = document.getElementById('greeting');
+
+        document.addEventListener('click', e => {
+
+            if (e.target.id === 'morning') {
+                document.body.style.background = 'lightyellow'
+                greeting.textContent = 'Goedemorgen'
+                greeting.style.color = '#000000';
+
+            } else if (e.target.id === 'noon') {
+                document.body.style.background = 'orange';
+                greeting.textContent = 'Goedemiddag';
+                greeting.style.color = '#000000'
+
+            } else if (e.target.id === 'evening') {
+                document.body.style.background = 'darkblue';
+                greeting.textContent = 'Goedenavond';
+                greeting.style.color = '#ffffff';
+
+            }
+        })
+    </script>
+</body>
+</html>
