@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opdracht 9</title>
+</head>
+<body>
+    
+    <p id="greeting">Hello world</p>
+
+        <button onclick="hideGreeting()">Hide</button>
+        <button onclick="showGreeting()">Show</button>
+
+
+    <script>
+        const greeting = document.getElementById('greeting');
+
+        greeting.style.display = 'block';
+
+        function hideGreeting() {
+            greeting.style.display = 'none';
+        }
+
+        function showGreeting() {
+            greeting.style.display = 'block';
+            greeting.style.backgroundColor = 'lightblue';
+        }
+    </script>
+</body>
+</html>
