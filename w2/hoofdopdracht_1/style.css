@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Relief:wght@400;700&family=DynaPuff:wght@400..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Relief", sans-serif;
+    background: rgb(242, 242, 211);
+    color: rgba(87, 72, 1, 0.872);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80dvh;
+}
+
+main div {
+    display: flex;
+    flex-direction: column;
+    gap: 5dvh;
+}
+
+main div div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1rem;
+    width: 100%;
+}
+ 
+h1 {
+    font-size: 54px;
+}
+
+button {
+    background: none;
+    padding: 12px 0;
+    flex: 1;
+    font-family: inherit;
+    cursor: pointer;
+    transition: transform .1s ease-in-out;
+    font-size: 1.5rem;
+    border: 3px solid rgba(87, 72, 1, 0.872);
+    color: rgba(87, 72, 1, 0.872);
+    background: rgb(250, 250, 250, .2);
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+button:active {
+    transform: scale(1.07);
+}
+
+
+.dark-theme {
+    background: navy;
+    color: rgb(246, 240, 240);
+}
+
+.dark-theme button {
+    background: rgba(0, 0, 0, .1);
+    border: 1px solid rgb(246, 240, 240);
+    color: rgb(246, 240, 240);
+}
