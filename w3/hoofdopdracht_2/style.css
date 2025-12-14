@@ -1,0 +1,190 @@
+/* DSEG font */
+@font-face {
+    font-family: "Counter";
+    src: url('./fonts/dseg.ttf');
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(
+        135deg,
+        #349410 0%,
+        #349410 50%,
+        #AE0502 50%,
+        #AE0502 100%
+    );
+    height: 100dvh;
+}
+
+.visible {
+    display: block !important;
+}
+
+.hidden {
+    display: none !important;
+}
+
+img {
+    width: clamp(280px, 35vw, 460px);
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100dvh;
+    position: relative;
+}
+
+#counter {
+    color: #f11511;
+    background: #000;
+    font-family: "Counter", sans-serif;
+    display: inline-flex;
+    padding: 18px 24px;
+    font-size: clamp(54px, 7vw, 107px);
+    margin: 0;
+    text-align: center;
+}
+
+.hero-content {
+    background: #DE8C3B;
+    border-radius: 297px 297px 0 0;
+    height: 55dvh;
+    width: clamp(300px, 60dvw, 700px);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 5vh 0 0 0;
+    box-shadow: 12px 12px 40px rgba(0, 0, 0, .5)
+}
+
+.buttons {
+    display: flex;
+    gap: 2vw;
+}
+
+button.btn {
+    border: none;
+    font-family: "inter", sans-serif;
+    font-size: clamp(38px, 5vw, 54px);
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 12px 24px;
+    color: #ffffff;
+    cursor: pointer;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, .25);
+    transform: translateY(-4%);
+    transition: transform .1s ease-in-out, filter .1s ease-in-out;
+}
+
+button.btn:hover,
+button.btn:focus {
+    filter: brightness(.9)
+}
+
+button.btn:active,
+#close-btn:active {
+    transform: translateY(4%)
+}
+
+button.btn.green {
+    background: #349410;
+}
+
+button.btn.red {
+    background: #AE0502;
+}
+
+.game-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#message {
+    font-family: "inter";
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: clamp(22px, 2vw, 36px);
+    margin: .5rem 0 0 0;
+    font-weight: 500;
+    text-shadow: 0 0 8px rgba(0, 0, 0, .25);
+    background: #000000;
+    padding: 16px 24px;
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+dialog {
+    z-index: 99;
+    background: #AE0502;
+    font-family: "inter";
+    color: #ffffff;
+    border: none;
+    padding: clamp(100px, 10vh, 300px) clamp(100px, 10vw, 150px);
+    position: relative;
+    box-shadow: 0 0 30px #B8120B;
+
+    &::backdrop {
+        background: rgba(0, 0, 0, .8);
+        backdrop-filter: blur(3px);
+    }
+}
+
+.modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.modal h2 {
+    font-size: 72px;
+    margin: 1rem 0;
+}
+
+.modal button {
+    background: #349410;
+}
+
+
+
+#close-btn {
+    background: transparent;
+    border: none;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: bold;
+    font-weight: bold;
+    color: #ffffff;
+    transform: translateY(-4%);
+}
+
+
+/* Levels */
+.level-10 {color: #e02a12}
+.level-9 {color: #cc3f13}
+.level-8 {color: #b75414}
+.level-7 {color: #a26914}
+.level-6 {color: #8e7e15}
+.level-5 {color: #7a9315}
+.level-4 {color: #659815}
+.level-3 {color: #509c14}
+.level-2 {color: #3c9f12}
+.level-1 {color: #349410}

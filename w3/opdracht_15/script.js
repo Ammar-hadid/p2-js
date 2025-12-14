@@ -43,6 +43,7 @@ function messageStatus() {
 
     } else if (count >= 3 && count <= 5) {
         return {text: 'Dat zijn er best veel…', color: 'orange'};
+        
     } else {
         return {text: 'Pauze? Water is ook lekker', color: 'red'};
     }
