@@ -116,5 +116,3 @@ function getResult(number) {
     }
         
 }
-
-console.log(getResult(5))
