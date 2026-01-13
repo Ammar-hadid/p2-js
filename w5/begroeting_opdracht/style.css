@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(216, 243, 216);
+}
+
+.hidden {
+    display: none;
+}
+
+.error {
+    color: rgb(218, 9, 9);
+}
+
+body main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: 100;
+    text-align: center;
+}
+
+p {
+    background: hsl(120, 53%, 97%);
+    padding: 2rem 3rem;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, .1);
+    text-align: center;
+}
+
+label, 
+p,
+input[type="text"] {
+    font-size: 1.5rem;
+
+}
+
+label {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+input[type="text"] {
+    line-height: 3rem;
+    border: 2px solid rgb(38, 180, 38);
+    flex: 1;
+    padding: 0 12px;
+}
+
+input[type="text"]:focus {
+    outline: none;
+}
+
+button {
+    background: rgb(38, 180, 38);
+    font-size: 2rem;
+    color: hsl(120, 53%, 97%);
+    padding: 20px;
+    border: none;
+    cursor: pointer;
+    transition: transform .1s ease-in;
+}
+
+button:active {
+    transform: translate(0, 5px);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 600px;
+}
+
