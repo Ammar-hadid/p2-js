@@ -1,0 +1,213 @@
+:root {
+    /* Base */
+    --primary-color-500: #030027;
+
+    --card-bg: rgba(255, 255, 255, .06);
+
+    --accent-color: #3454D1;
+    --interactive-color: hsl(228, 63%, 40%);
+
+    --positive-color: #4FA3A5;
+    --negative-color: #B56A7A;
+
+    --text-color: #EEFBFB;
+    --text-color-400: rgba(238, 251, 251, .4);
+
+    --font-family: "MedievalSharp", cursive;
+
+    --font-size-h1: 4rem;
+    --font-size-h2: 2rem;
+    --font-size-h3: 1.75rem;
+
+    --font-size-p: 1.5rem;
+
+    --ls-body: .02em;
+    --ls-heading: .05em;
+
+    --lh-body: 1.5;
+    --lh-heading: 1.1;
+
+    --space-1: .5rem;
+    --space-2: .75rem;
+    --space-3: 1.25rem;
+    --space-4: 1.75rem;
+    --space-5: 2.5rem;
+    --space-6: 4rem;
+
+    --box-shadow: 12px 12px 25px rgba(0, 0, 0, .3);
+    --box-shadow-positive: 6px 6px 22px rgba(79, 163, 165, .25);
+    --box-shadow-negative: 6px 6px 22px rgba(181, 106, 122, .25);
+}
+
+/* Group selectors */
+
+* {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--primary-color-500);
+}
+
+
+h1, p, label {
+    color: var(--text-color);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    letter-spacing: var(--ls-heading);
+    line-height: var(--lh-heading);
+}
+
+p {
+    line-height: var(--lh-body);
+    letter-spacing: var(--ls-body);
+}
+
+label {
+    font-size: var(--font-size-h3);
+}
+
+button {
+    background: var(--accent-color);
+    padding: var(--space-3);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: var(--font-size-h3);
+    transition: transform .3s ease-in;
+}
+
+button:hover {
+    transform: scale(1.02);
+}
+
+button:active {
+    background: var(--interactive-color);
+}
+
+/* Utility classes */
+
+
+/* Components */
+.card {
+    background: var(--card-bg);
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-5);
+    box-shadow: var(--box-shadow);
+}
+
+.card.positive {
+    box-shadow: var(--box-shadow-positive);
+}
+
+.card.negative {
+    box-shadow: var(--box-shadow-negative);
+}
+
+/* -----------------------
+------- Main screen ------
+--------------------------*/
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90dvh;
+    transition: opacity 1s ease-in;
+}
+
+.hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    inset: 0;
+}
+
+
+.main-screen .content-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12vw;
+}
+
+.main-screen .content-wrapper > * {
+    flex: 1;
+}
+
+.main-screen .paragraph {
+    max-width: min(500px, 30vw);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.main-screen .paragraph p {
+    font-size: var(--font-size-p);
+}
+
+.main-screen .card {
+    max-width: max(30%, 400px);
+}
+
+.main-screen label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    margin: 0 0 var(--space-6) 0;
+}
+
+.main-screen .card input[type="text"] {
+    background: none;
+    border: 5px solid var(--accent-color);
+    padding: var(--space-3);
+    color: var(--text-color);
+    font-size: var(--font-size-p);
+}
+
+.main-screen .card input[type="text"]:focus {
+    outline: none;
+    border-color: var(--interactive-color);
+}
+
+.main-screen .card input[type="text"]::placeholder {
+    color: var(--text-color-400);
+}
+
+/* -----------------------
+------- Result screen ------
+--------------------------*/
+.result-screen .content-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    max-width: clamp(700px, 70vw, 900px);
+    align-items: center;
+}
+
+
+.result-screen h1 {
+    text-shadow: 0 0 8px rgba(0, 0, 0, .5);
+}
+
+.result-screen h1.positive {
+    color: var(--positive-color);
+}
+
+.result-screen h1.negative {
+    color: var(--negative-color);
+}
+
+.result-screen .card {
+    gap: var(--space-6);
+    padding: var(--space-6)
+}
+
+.result-screen p {
+    font-size: var(--font-size-h2);
+    text-align: center;
+}

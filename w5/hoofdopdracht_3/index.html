@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Fortune teller</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="./style.css">
+
+        <script src="./script.js" defer type="module"></script>
+    </head>
+
+    <body>
+        <main class="main-screen">
+            <section class="content-wrapper">
+
+                <!-- Paragraph block -->
+                <div class="paragraph">
+                    <h1>Fortune teller</h1>
+                    <p>The future is never certain, but every question deserves an answer. Enter a yes or no question, reveal your fortune, and see what fate has prepared for you. When the moment passes, return and ask again.</p>
+                </div>
+
+                <!-- Input card -->
+                <div class="card">
+                    <label>
+                        What Do You Seek to Know?
+                        <input type="text" id="question" placeholder="Type a yes or no question here...">
+                    </label>
+
+                    <button class="btn" data-action="reveal">Reveal My Fate</button>
+                </div>
+            </section>
+        </main>
+
+        <main class="result-screen hidden">
+            <section class="content-wrapper">
+                <h1 id="result-heading">Fate has spoken</h1>
+
+                <div id="result-card" class="card">
+                    <p id="message">“A door you thought was closed begins to open. What follows feels lighter than expected.”</p>
+                    <button class="btn" data-action="reset">Seek Another Answer</button>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

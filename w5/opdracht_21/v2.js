@@ -39,9 +39,9 @@ function generateAdvise() {
         alert('Je hebt alle adviesen al gehad, we beginnen nu opnieuw!');
     }
 
-    const index = Math.floor(Math.random() * allAdviceArr.length);
+    const index = Math.floor(Math.random() * remainingAdvice.length);
 
-    const advice = allAdviceArr[index];
+    const advice = remainingAdvice[index];
 
     remainingAdvice.splice(index, 1);
 
