@@ -1,0 +1,15 @@
+p {
+    font-size: 5rem;
+    text-align: center;
+}
+
+@keyframes zoom {
+    0% {transform: scale(.8);}
+
+    100% {transform: scale(1);}
+}
+
+#message.animate {
+    animation: zoom .3s ease-in;
+}
+
