@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Space Mono", monospace;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        hsl(283.85, 72.8%, 55.98%),
+        hsl(283.85, 72.8%, 30.98%)
+    );
+    height: 100vh;
+}
+
+h1 {
+    color: #ffffff;
+    letter-spacing: .1em;
+    font-size: 52px;
+    text-align: center;
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, .2);
+    padding: 3rem 5rem;
+    gaP: 4rem;
+    border-radius: 25px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, .2)
+}
+
+.loading-bar-wrapper {
+    width: 30vw;
+    background: rgb(217, 207, 207);
+    padding: 2px;
+    position: relative;
+}
+
+.loading-block {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.emoji-wrapper {
+    background: rgb(237, 224, 224);
+    padding: 9px 12px;
+}
+
+#emoji {
+    font-size: 1.5rem;
+}
+
+.loading-bar {
+    --progress: 0;
+    width: calc(var(--progress) * 1%);
+    background: rgba(127, 17, 224, 
+    clamp(0, calc(var(--progress) / 100 + .2), 1)
+    );
+    transition: width .3s, background .3s ease-in;
+    height: 40px;
+}
