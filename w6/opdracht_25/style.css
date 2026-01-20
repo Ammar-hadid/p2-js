@@ -1,0 +1,5 @@
+body {
+    --random-color: #cccccc;
+    background-color: var(--random-color);
+    transition: background-color .1s ease-in-out;
+}
