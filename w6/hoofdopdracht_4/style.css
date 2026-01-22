@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'timer';
+    src: url('./Technology-Bold.ttf');
+}
+
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'inter', sans-serif;
+}
+
+body {
+    background: linear-gradient(
+        135deg,
+        hsl(290, 69%, 45%),
+        hsl(290, 69%, 30%)
+    );
+    height: 100dvh;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem
+}
+
+
+
+h1 {
+    font-size: clamp(2rem, 6vw, 4rem);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: linear-gradient(
+        135deg,
+        hsl(290, 100%, 93%),
+        hsl(290, 100%, 77%)
+    );
+    background-clip: text;
+    color: transparent;
+}
+
+.timer-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, .1);
+    padding: 3rem 5rem;
+    gap: clamp(2rem, 3vmax, 5rem);
+    box-shadow: 8px 8px 12px rgba(0, 0, 0, .3);
+}
+
+.timer-card h2 {
+    font-size: clamp(4rem, 8vw, 8rem);
+    font-family: 'timer';
+    color: hsl(1, 77%, 48%);
+    background: #000000;
+    padding: 1.4rem clamp(2.5rem, 5vw, 3.2rem) 1rem clamp(2.5rem, 5vw, 3.2rem);
+    text-align: center;
+}
+
+.timer-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: stretch;
+}
+
+.loading-bar-wrapper {
+    width: 100%;
+    background: #330000;
+}
+
+.loading-bar {
+    --progress: 100;
+    width: calc(var(--progress) * 1% );
+    background: #ED0000;
+    height: 20px;
+    transition: width .2s ease-in;
+
+}
+
+.btn {
+    background: hsl(290, 69%, 30%);
+    color: #ffffff;
+    border: none;
+    padding: 22px;
+    font-size: clamp(1rem, 2vw, 2.5rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, .2);
+    transition: transform .04s ease-in;
+}
+
+.btn.increment {
+    font-size: clamp(.9rem, 1.5vw, 2rem);
+    background: hsl(290, 69%, 33%);
+    border-radius: 15px;
+
+}
+
+.btn:active {
+    transform: translateY(2px)
+}
+
+.button-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.pause {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.start {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+#finished-sessions {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 500;
+    letter-spacing: .05em;
+}

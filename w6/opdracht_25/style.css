@@ -1,5 +1,23 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
     --random-color: #cccccc;
     background-color: var(--random-color);
-    transition: background-color .1s ease-in-out;
+    transition: background-color .2s ease-in-out;
+}
+
+main {
+    display: flex;
+    height: 90dvh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 12rem;
 }

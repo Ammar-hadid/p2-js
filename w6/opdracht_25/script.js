@@ -1,5 +1,7 @@
 const message = document.querySelector('h1');
 
+let intervalId;
+
 startLoop()
 
 function generateRandomHex() {
@@ -14,6 +16,6 @@ function renderColor() {
 }
 
 function startLoop() {
-    setInterval(renderColor, 500);
+    intervalId = setInterval(renderColor, 500);
 }
 
