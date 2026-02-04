@@ -94,7 +94,7 @@ function showFinishScreen() {
     if(AlarmSound.currentTime !== 0) AlarmSound.currentTime = 0;
     AlarmSound.play();
 
-    alert('finished')
+    alert('Timer finished');
 }
 
 function setBreak(minutes) {
