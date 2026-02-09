@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Random Pokémon picker</title>
+
+        <!-- Inter (Google fonts library) -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+        <!-- Font awesome CDN -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        
+        <link rel="stylesheet" href="./style.css">
+        <script src="./script.js" type="module" defer></script>
+    </head>
+
+    <body>
+        <main id="start-screen" class="">
+            <!-- First block -->
+            <div>
+                <div>
+                    <h1>Discover your starter Pokémon</h1>
+                    <p>Every trainer starts with a starter Pokémon. Press the button and see which Pokémon you get to begin your adventure.</p>
+                </div>
+
+                <button id="cta">See my starter</button>
+            </div>
+
+            <!-- Second block -->
+            <div class="carousel">
+                <div class="wrapper">
+                    <img src="./assets/images/pikachu.png">
+                    <img src="./assets/images/fire.png">
+                    <img src="./assets/images/grass.png">
+
+                    <img src="./assets/images/pikachu.png">
+                    <img src="./assets/images/fire.png">
+                    <img src="./assets/images/grass.png">
+                </div>
+            </div>
+        </main>
+
+        <main id="end-screen" class="hidden">
+            <button id="return-btn">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            
+            <h1 class="end-screen-title">Say hello to your starter!</h1>
+            <div class="card">
+                <!-- Image gets rendered here -->
+                <img src="./assets/images/pikachu.png">
+
+                <div class="pokedata">
+                    <p>Pikachu</p>
+                    <ul>
+                        <li><span>Type:</span> Electric</li>
+                        <li><span>power level:</span> 85</li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

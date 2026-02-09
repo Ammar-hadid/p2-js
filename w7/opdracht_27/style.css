@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'pokemon';
+    src: url('./assets/fonts/Pokemon-solid.ttf')
+}
+
+:root {
+    --primary-color: #2A75BB;
+    --bg-color: #FFCC00;
+    --font-color-d: #133453;
+    --font-color-l: #ffffff;
+    --poke-color: ;
+
+    --interactive-color: #2668a6;
+    
+    --fs-h-s: 3rem;
+    --fs-h-m: 3.25rem;
+    --fs-h-l: 4.5rem;
+
+    --fs-p-m: 1.5rem;
+    --fs-p-l: 1.75rem;
+
+    --ff-h: 'pokemon', sans-serif;
+    --ff-p: 'inter', sans-serif;
+
+
+    --ts: 0 0 8px rgba(0, 0, 0, .25);
+    --bs: 6px 6px 12px rgba(0, 0, 0, .25);
+
+    --space-s: 1rem;
+    --space-m: 2rem;
+    --space-l: 3rem;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: var(--ff-h);
+    color: var(--primary-color);
+    letter-spacing: .2em;
+    text-shadow: var(--ts);
+    line-height: 1.5;
+}
+
+p, button, ul {
+    font-family: var(--ff-p);
+}
+
+img {
+    width: 300px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90dvh;
+}
+
+/* Startscreen */
+#start-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(150px, 15vw, 200px);
+}
+
+
+
+#start-screen > div:first-of-type {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+#start-screen > div:nth-child(1) h1 {
+    font-size: var(--fs-h-m);
+}
+
+
+#start-screen > div:nth-child(1) p {
+    font-size: var(--fs-p-m);
+    color: var(--font-color-d);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#start-screen > div:nth-child(1) button {
+    background: var(--primary-color);
+    border: none;
+    color: var(--font-color-l);
+    padding: var(--space-m) var(--space-l);
+    font-size: var(--fs-p-m);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+#start-screen > div:nth-child(1) button:hover {
+    background: var(--interactive-color);
+}
+
+/* Carousel */
+
+#start-screen .carousel {
+    width: 600px;
+    overflow-x: hidden;
+    background-color: var(--primary-color);
+    position: relative;
+    z-index: 1;
+}
+
+#start-screen .carousel::before,
+#start-screen .carousel::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: var(--space-m);
+    background: var(--primary-color);
+    z-index: 2;
+}
+
+#start-screen .carousel::before {
+    left: 0;
+}
+
+#start-screen .carousel::after {
+    right: 0;
+}
+
+
+#start-screen .carousel .wrapper {
+    display: flex;
+    width: fit-content;
+
+    animation: move-carousel 5s linear infinite;
+}
+
+@keyframes move-carousel {
+    0% {transform: translateX(0)}
+
+    100% {transform: translateX(
+        calc(
+            -900px
+            ))
+        }
+}
+
+#start-screen img {
+    flex-shrink: 0; 
+}
+
+/* Second screen */
+#return-btn {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: var(--primary-color);
+    color: var(--font-color-l);
+    border: none;
+    padding: var(--space-s);
+    font-size: var(--fs-p-m);
+    cursor: pointer;
+    transition: transform .2s ease-in-out;
+}
+
+#return-btn:hover {
+    background-color: var(--interactive-color);
+    transform: scale(1.02);
+}
+
+#end-screen {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-l);
+    align-items: center;
+}
+
+#end-screen h1 {
+    font-size: var(--fs-h-m);
+}
+
+@keyframes zoom {
+    0% {transform: scale(0)};
+
+    80% {transform: scale(1.2)};
+
+    100% {transform: scale(1)};
+}
+
+#end-screen .card {
+    display: flex;
+    background-color: var(--primary-color);
+    padding: var(--space-m) var(--space-l);
+    gap: var(--space-m);
+    box-shadow: var(--bs);
+}
+
+#end-screen .card.animate {
+    animation: zoom .3s ease-in;
+}
+
+#end-screen .card .pokedata {
+    color: var(--font-color-l);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    margin: var(--space-m) 0 0 0;
+}
+
+#end-screen .card .pokedata p {
+    font-size: var(--fs-h-s);
+    font-weight: 500;
+}
+
+#end-screen .card .pokedata ul {
+    list-style: none;
+    font-size: var(--fs-p-m);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+}
+
+#end-screen .card .pokedata ul span {
+    font-weight: 700;
+}
+
+#end-screen .card .pokedata ul li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-s);
+}
+
+#end-screen .card .pokedata ul li::before {
+    content: '';
+    width: 15px;
+    height: 2.5px;
+    background-color: var(--poke-color);
+}
+
+#end-screen .card img {
+    border: 5px solid var(--poke-color);
+}
